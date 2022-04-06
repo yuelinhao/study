@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(./../images/f1_1.jpg) no-repeat center 0;
+
+    /* 缩放背景图 */
+
+    /* 图片等比例缩放, 当宽度或高度和盒子尺寸相等, 图片就不再缩放 */
+    /* background-size: contain; */
+
+    /* 图片等比例缩放, 图片完全覆盖到整个盒子, 可能会导致图片显示不全 */
+    background-size: cover;
+}
+
+/* 
+1. img 引入图片, 控制位置
+2. 定义动画,使用动画
+*/
+
+.cloud img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+    animation: cloud 1s infinite alternate linear;
+}
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 1s infinite alternate 0.2s linear;
+}
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: cloud 1s infinite alternate 0.4s linear;
+}
+.cloud img:nth-child(4) {
+    margin-left: -400px;
+    top: 160px;
+    animation: hot 1s infinite alternate linear;
+}
+.cloud img:nth-child(5) {
+    margin-left: -330px;
+    top: 334px;
+    animation: zhoubianyou 0.5s alternate backwards;
+}
+.cloud img:nth-child(6) {
+    margin-left: 172px;
+    top: 146px;   
+}
+.cloud img:nth-child(7) {
+    margin-left: -412px;
+    top: 730px;
+    animation: last 0.8s infinite alternate linear;
+}
+
+.cloud img:nth-child(8) {
+    margin-left: -184px;
+    top: 730px;
+    animation: last 0.8s infinite alternate 0.2s linear;
+}
+
+.cloud img:nth-child(9) {
+    margin-left: 44px;
+    top: 730px;
+    animation: last 0.8s infinite alternate 0.4s linear;
+}
+
+.cloud img:last-child {
+    margin-left: 272px;
+    top: 730px;
+    animation: last 0.8s infinite alternate 0.6s linear;
+}
+/* 云彩动画 */
+@keyframes cloud {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+/* 热气球动画 */
+@keyframes hot {
+    to {
+        transform: translateY(20px);
+    }
+    
+}
+
+/* 周边游动画 */
+@keyframes zhoubianyou {
+    to {
+        transform: scale(1.3);
+    }
+}
+
+/* 最后标签动画 */
+@keyframes last {
+    to {
+        transform: translateY(30px);
+    }
+}
